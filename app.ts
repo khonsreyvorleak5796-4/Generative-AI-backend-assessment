@@ -1,4 +1,4 @@
-import { askQuery } from './src/controllers/chat.controller';
+import { createCertifi } from './src/controllers/createcertificate.controller';
 
 import express from 'express';
 const app = express();
@@ -10,6 +10,8 @@ import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import swaggerOptions from './swagger';
 import chat from './src/routes/chat'
+import certificate from './src/routes/certificate'
+
 import cors from "cors";
 
 
@@ -29,6 +31,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Routes setup
 app.use('/api/auth', auth)
 app.use('/api/chat', chat)
+app.use('/api/certificate', certificate)
 
 
 // Start server

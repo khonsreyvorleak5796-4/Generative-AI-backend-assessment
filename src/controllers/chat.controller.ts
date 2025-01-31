@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import ollama from 'ollama';
+// import ollama from 'ollama';
 import { ollamaNoStream, ollamaStream } from "../service/ollamaChat";
 
 export const askQuery = async (req: Request, res: Response) => {
